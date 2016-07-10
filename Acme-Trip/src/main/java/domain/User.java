@@ -26,7 +26,8 @@ public class User extends Actor{
 		//Relationships
 		private Collection<Activity> activities;
 		private Collection<Group> groupBoss;
-		private Collection<Group> userGroup;
+		private Collection<Group> groupsMembers;
+		private Collection<Trip> trips;
 		
 		@Valid
 		@OneToMany(mappedBy="user")
@@ -51,11 +52,21 @@ public class User extends Actor{
 		@ManyToMany
 		@JoinTable(name="Group_User")
 		public Collection<Group> getGroupsMembers(){
-			return userGroup;
+			return groupsMembers;
 		}
 		
-		public void setGroupsMembers(Collection<Group> userGroup){
-			this.userGroup = userGroup;
+		public void setGroupsMembers(Collection<Group> groupsMembers){
+			this.groupsMembers = groupsMembers;
+		}
+
+		@Valid
+		@OneToMany(mappedBy="trip")
+		public Collection<Trip> getTrips() {
+			return trips;
+		}
+
+		public void setTrips(Collection<Trip> trips) {
+			this.trips = trips;
 		}
 
 }

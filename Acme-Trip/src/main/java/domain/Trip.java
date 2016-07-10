@@ -7,7 +7,9 @@ import javax.persistence.Access;
 import javax.persistence.AccessType;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
+import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Past;
 
@@ -60,6 +62,7 @@ public class Trip extends DomainEntity implements Comentable{
 	private Collection <DailyPlan> dailyPlans;
 	private Collection <Group> groups;
 	private Collection <Comment> comments;
+	private User user;
 
 	@NotNull
 	@OneToMany(mappedBy="trip",cascade= CascadeType.ALL)
@@ -89,6 +92,16 @@ public class Trip extends DomainEntity implements Comentable{
 
 	public void setComments(Collection<Comment> comments) {
 		this.comments = comments;
+	}
+
+	@Valid
+	@ManyToOne(optional=false)
+	public User getUser() {
+		return user;
+	}
+
+	public void setUser(User user) {
+		this.user = user;
 	}
 	
 	

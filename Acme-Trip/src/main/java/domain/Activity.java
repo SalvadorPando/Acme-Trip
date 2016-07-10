@@ -72,7 +72,6 @@ public class Activity extends DomainEntity implements Comentable{
 	private DailyPlan dailyPlan;
 	private User user;
 	private Type type;
-	private Collection<Slot> slots;
 	
 	@Valid
 	@OneToMany(mappedBy="activity")
@@ -115,15 +114,5 @@ public class Activity extends DomainEntity implements Comentable{
 		this.type = type;
 	}
 	
-	@Valid
-	@OneToMany(mappedBy="activity", cascade=CascadeType.ALL)
-	public Collection<Slot> getSlots(){
-		return slots;
-	}
-	
-	public void setSlots(Collection<Slot> slots){
-		this.slots = slots;
-	}
-
 	
 }

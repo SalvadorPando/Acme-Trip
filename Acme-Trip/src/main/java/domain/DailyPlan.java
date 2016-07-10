@@ -4,6 +4,7 @@ import java.util.Collection;
 
 import javax.persistence.Access;
 import javax.persistence.AccessType;
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
@@ -70,6 +71,7 @@ public class DailyPlan extends DomainEntity{
 	
 	private Trip trip;
 	private Collection<Activity> activities;
+	private Collection<Slot> slots;
 	
 	@Valid
 	@ManyToOne(optional = false)
@@ -89,6 +91,16 @@ public class DailyPlan extends DomainEntity{
 	
 	public void setActivities(Collection<Activity> activities){
 		this.activities = activities;
+	}
+
+	@Valid
+	@OneToMany(mappedBy="dailyPlan", cascade=CascadeType.ALL)
+	public Collection<Slot> getSlots() {
+		return slots;
+	}
+
+	public void setSlots(Collection<Slot> slots) {
+		this.slots = slots;
 	}
 	
 }

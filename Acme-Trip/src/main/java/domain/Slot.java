@@ -90,6 +90,7 @@ public class Slot extends DomainEntity{
 	//RelationShips
 	
 	private Activity activity;
+	private DailyPlan dailyPlan;
 	
 	@Valid
 	@ManyToOne(optional = false)
@@ -99,5 +100,13 @@ public class Slot extends DomainEntity{
 	
 	public void setActivity(Activity activity){
 		this.activity = activity;
+	}
+
+	public DailyPlan getDailyPlan() {
+		return dailyPlan;
+	}
+
+	public void setDailyPlan(DailyPlan dailyPlan) {
+		this.dailyPlan = dailyPlan;
 	}
 }
