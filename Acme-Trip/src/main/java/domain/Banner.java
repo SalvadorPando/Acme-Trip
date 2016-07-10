@@ -53,15 +53,15 @@ public class Banner extends DomainEntity{
 	}
 	
 	//RelationShips
-	private Campaing campaing;
+	private Campaign campaign;
 
 	@Valid
 	@ManyToOne(optional=false)
-	public Campaing getCampaing() {
-		return campaing;
+	public Campaign getCampaing() {
+		return campaign;
 	}
-	public void setCampaing(Campaing campaing) {
-		this.campaing = campaing;
+	public void setCampaing(Campaign campaign) {
+		this.campaign = campaign;
 	}
 	
 	

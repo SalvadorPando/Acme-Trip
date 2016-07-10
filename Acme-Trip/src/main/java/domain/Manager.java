@@ -14,7 +14,7 @@ public class Manager extends Actor{
 
 	//RelationShip
 	private Collection<CreditCard> creditCards;
-    private Collection<Campaing> campaings;
+    private Collection<Campaign> campaigns;
 
 	@NotNull
 	@OneToMany(mappedBy="manager")
@@ -28,12 +28,12 @@ public class Manager extends Actor{
 
 	@NotNull
 	@OneToMany(mappedBy="manager")
-	public Collection<Campaing> getCampaings() {
-		return campaings;
+	public Collection<Campaign> getCampaings() {
+		return campaigns;
 	}
 
-	public void setCampaings(Collection<Campaing> campaings) {
-		this.campaings = campaings;
+	public void setCampaings(Collection<Campaign> campaigns) {
+		this.campaigns = campaigns;
 	}
 
 }

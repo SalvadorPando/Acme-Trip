@@ -17,7 +17,7 @@ import org.springframework.format.annotation.DateTimeFormat;
 
 @Entity
 @Access(AccessType.PROPERTY)
-public class Campaing extends DomainEntity{
+public class Campaign extends DomainEntity{
 
 	private Date startMoment;
 	private Date endMoment;
@@ -69,7 +69,7 @@ public class Campaing extends DomainEntity{
 	
 	
 	@NotNull
-	@OneToMany(mappedBy="campaing")
+	@OneToMany(mappedBy="campaign")
 	public Collection<Banner> getBanners() {
 		return banners;
 	}
@@ -78,7 +78,7 @@ public class Campaing extends DomainEntity{
 	}
 	
 	@NotNull
-	@OneToMany(mappedBy="campaing")
+	@OneToMany(mappedBy="campaign")
 	public Collection<ChargeRecord> getChargeRecords() {
 		return chargeRecords;
 	}

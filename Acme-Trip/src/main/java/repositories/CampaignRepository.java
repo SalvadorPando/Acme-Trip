@@ -3,9 +3,9 @@ package repositories;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import domain.Campaing;
+import domain.Campaign;
 
 @Repository
-public interface CampaingRepository extends JpaRepository<Campaing,Integer>{
+public interface CampaignRepository extends JpaRepository<Campaign,Integer>{
 
 }

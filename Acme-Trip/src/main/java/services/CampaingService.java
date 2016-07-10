@@ -7,8 +7,8 @@ import javax.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import repositories.CampaingRepository;
-import domain.Campaing;
+import repositories.CampaignRepository;
+import domain.Campaign;
 
 
 @Service
@@ -16,32 +16,32 @@ import domain.Campaing;
 public class CampaingService {
 
 	@Autowired
-	private CampaingRepository campaingRepository;
+	private CampaignRepository campaignRepository;
 
 	public CampaingService() {
 		super();
 	}
 	
-	public Campaing create(){
+	public Campaign create(){
 		return null;
 	}
 	
 
-	public Collection<Campaing> findAll(){
-		return campaingRepository.findAll();
+	public Collection<Campaign> findAll(){
+		return campaignRepository.findAll();
 	}
 	
-	public Campaing findOne(int id_campaing){
-		return campaingRepository.findOne(id_campaing);
+	public Campaign findOne(int id_campaing){
+		return campaignRepository.findOne(id_campaing);
 		
 	}
 	
-	public void save(Campaing campaing){
-		campaingRepository.save(campaing);
+	public void save(Campaign campaign){
+		campaignRepository.save(campaign);
 	}
 	
-	public void delete(Campaing campaing){
-		campaingRepository.delete(campaing);
+	public void delete(Campaign campaign){
+		campaignRepository.delete(campaign);
 	}
 	
 }

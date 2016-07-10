@@ -9,6 +9,9 @@ import domain.DailyPlan;
 @Repository
 public interface DailyPlanRepository extends JpaRepository<DailyPlan,Integer>{
 
-	@Query("select count(dp)/(select count(t) from Trip t)*1.0 from DailyPlan dp")
-	public double numDailyPlanPerTrip();
+	@Query("select avg(t.dailyPlans.size) from Trip t")
+	public Double averageOfDailyPlansPerTrip();
+	
+	@Query("select stddev(t.dailyPlans.size) from Trip t")
+	public Double standardDeviationOfDailyPlansPerTrip();
 }

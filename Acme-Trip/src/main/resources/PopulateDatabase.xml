@@ -168,10 +168,10 @@
 				<ref bean="creditCard2" />
 			</list>
 		</property>
-		<property name="campaings">
+		<property name="campaigns">
 			<list>
-				<ref bean="campaing1" />
-				<ref bean="campaing2" />
+				<ref bean="campaign1" />
+				<ref bean="campaign2" />
 			</list>
 		</property>
 		<!-- <property name="comments">
@@ -513,9 +513,9 @@
 		<property name="manager" ref="manager1"/>
 	</bean>
 	
-	<!-- Campaing -->
+	<!-- Campaign -->
 	
-	<bean id="campaing1" class="domain.Campaing">
+	<bean id="campaign1" class="domain.Campaign">
 		<property name="startMoment" value="10/22/2015 22:00" />
 		<property name="endMoment" value="10/22/2016 22:00" />
 		<property name="manager" ref="manager1"/>
@@ -534,7 +534,7 @@
 		</property>
 	</bean>
 	
-	<bean id="campaing2" class="domain.Campaing">
+	<bean id="campaign2" class="domain.Campaign">
 		<property name="startMoment" value="10/22/2015 22:00" />
 		<property name="endMoment" value="10/22/2016 22:00" />
 		<property name="manager" ref="manager1"/>
@@ -559,7 +559,7 @@
 		<property name="keyWord" value="La vida" />
 		<property name="numberDisplayed" value="30" />
 		<property name="nTimes" value="3" />
-		<property name="campaing" ref="campaing1"/>
+		<property name="campaign" ref="campaign1"/>
 	</bean>
 	
 	<bean id="banner2" class="domain.Banner">
@@ -567,7 +567,7 @@
 		<property name="keyWord" value="La vida 2" />
 		<property name="numberDisplayed" value="30" />
 		<property name="nTimes" value="2" />
-		<property name="campaing" ref="campaing1"/>
+		<property name="campaign" ref="campaign1"/>
 	</bean>
 	
 	<bean id="banner3" class="domain.Banner">
@@ -575,7 +575,7 @@
 		<property name="keyWord" value="la vida 3" />
 		<property name="numberDisplayed" value="10" />
 		<property name="nTimes" value="1" />
-		<property name="campaing" ref="campaing2"/>
+		<property name="campaign" ref="campaign2"/>
 	</bean>
 	
 
@@ -585,21 +585,21 @@
 		<property name="createMoment" value="11/22/2015 22:00" />
 		<property name="amount" value="20.0" />
 		<property name="tax" value="0.2" />
-		<property name="campaing" ref="campaing1"/>
+		<property name="campaign" ref="campaign1"/>
 	</bean>
 	
 	<bean id="chargeRecord2" class="domain.ChargeRecord">
 		<property name="createMoment" value="12/22/2015 22:00" />
 		<property name="amount" value="20.0" />
 		<property name="tax" value="0.2" />
-		<property name="campaing" ref="campaing1"/>
+		<property name="campaign" ref="campaign1"/>
 	</bean>
 	
 	<bean id="chargeRecord3" class="domain.ChargeRecord">
 		<property name="createMoment" value="11/22/2015 22:00" />
 		<property name="amount" value="40.0" />
 		<property name="tax" value="0.2" />
-		<property name="campaing" ref="campaing2"/>
+		<property name="campaign" ref="campaign2"/>
 	</bean>
 
 	<!-- Trip -->
