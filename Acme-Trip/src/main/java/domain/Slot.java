@@ -102,6 +102,8 @@ public class Slot extends DomainEntity{
 		this.activity = activity;
 	}
 
+	@Valid
+	@ManyToOne(optional = false)
 	public DailyPlan getDailyPlan() {
 		return dailyPlan;
 	}

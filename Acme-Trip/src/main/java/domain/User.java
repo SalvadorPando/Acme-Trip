@@ -60,7 +60,7 @@ public class User extends Actor{
 		}
 
 		@Valid
-		@OneToMany(mappedBy="trip")
+		@OneToMany(mappedBy="user")
 		public Collection<Trip> getTrips() {
 			return trips;
 		}

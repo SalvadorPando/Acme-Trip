@@ -28,11 +28,11 @@ public class Manager extends Actor{
 
 	@NotNull
 	@OneToMany(mappedBy="manager")
-	public Collection<Campaign> getCampaings() {
+	public Collection<Campaign> getCampaigns() {
 		return campaigns;
 	}
 
-	public void setCampaings(Collection<Campaign> campaigns) {
+	public void setCampaigns(Collection<Campaign> campaigns) {
 		this.campaigns = campaigns;
 	}
 

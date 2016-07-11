@@ -67,7 +67,6 @@ public class Campaign extends DomainEntity{
 		this.creditCard = creditCard;
 	}
 	
-	
 	@NotNull
 	@OneToMany(mappedBy="campaign")
 	public Collection<Banner> getBanners() {

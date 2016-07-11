@@ -79,13 +79,10 @@
 				<ref bean="folder5" />
 			</list>
 		</property>
-		<!-- <property name="comments">
+		<property name="comments">
 			<list>
-				<ref bean="comment2" />
-				<ref bean="comment3" />
 			</list>
 		</property>
-		 -->
 	</bean>
 
 
@@ -111,12 +108,19 @@
 				<ref bean="activity2" />
 			</list>
 		</property>
-		<!-- <property name="comments">
+		<property name="comments">
 			<list>
 				<ref bean="comment1" />
-				<ref bean="comment4" />
+				<ref bean="comment3" />
 			</list>
-		</property> -->
+		</property>
+		<property name="trips">
+			<list>
+				<ref bean="trip1" />
+				<ref bean="trip2" />
+				<ref bean="trip3" />
+			</list>
+		</property>
 	</bean>
 
 	<bean id="user2" class="domain.User">
@@ -140,10 +144,18 @@
 				<ref bean="activity4" />
 			</list>
 		</property>
-		<!-- <property name="comments">
+		<property name="comments">
 			<list>
+				<ref bean="comment2" />
 			</list>
-		</property> -->
+		</property>
+		<property name="trips">
+			<list>
+				<ref bean="trip4" />
+				<ref bean="trip5" />
+				<ref bean="trip6" />
+			</list>
+		</property>
 	</bean>
 	
 	<!-- Manager -->
@@ -609,6 +621,7 @@
 		<property name="organisedDate" value="11/20/2015 22:00" />
 		<property name="description" value="Un viaje que nunca olvidaras" />
 		<!--<property name="photo" value=""/>-->
+		<property name="user" ref="user1"/>
 		<property name="dailyPlans">
 			<list>
 				<ref bean="dailyPlan1" />
@@ -632,6 +645,7 @@
 		<property name="organisedDate" value="08/08/2014 10:00" />
 		<property name="description" value="Un viaje que nunca olvidaras" />
 		<!--<property name="photo" value=""/>-->
+		<property name="user" ref="user1"/>
 		<property name="dailyPlans">
 			<list>
 				<ref bean="dailyPlan2" />
@@ -654,6 +668,7 @@
 		<property name="organisedDate" value="09/22/2015 09:00" />
 		<property name="description" value="Un viaje que nunca olvidaras" />
 		<!--<property name="photo" value=""/>-->
+		<property name="user" ref="user1"/>
 		<property name="dailyPlans">
 			<list>
 				<ref bean="dailyPlan3" />
@@ -675,6 +690,7 @@
 		<property name="organisedDate" value="01/30/2014 22:00" />
 		<property name="description" value="Un viaje que nunca olvidaras" />
 		<!--<property name="photo" value=""/>-->
+		<property name="user" ref="user2"/>
 		<property name="dailyPlans">
 			<list>
 			</list>
@@ -694,6 +710,7 @@
 		<property name="organisedDate" value="14/02/2015 22:00" />
 		<property name="description" value="Un viaje que nunca olvidaras" />
 		<!--<property name="photo" value=""/>-->
+		<property name="user" ref="user2"/>
 		<property name="dailyPlans">
 			<list>
 			</list>
@@ -713,6 +730,7 @@
 		<property name="organisedDate" value="07/07/2015 07:00" />
 		<property name="description" value="Un viaje que nunca olvidaras" />
 		<!--<property name="photo" value=""/>-->
+		<property name="user" ref="user2"/>
 		<property name="dailyPlans">
 			<list>
 			</list>
@@ -734,6 +752,14 @@
 		<property name="description" value="description1" />
 		<property name="photo" value="http://www.photo1.com" />
 		<property name="trip" ref="trip1" />
+		<property name="slots">
+			<list>
+				<ref bean="slot1" />
+				<ref bean="slot2" />
+				<ref bean="slot3" />
+				<ref bean="slot4" />
+			</list>
+		</property>
 	</bean>
 	
 	<bean id="dailyPlan2" class="domain.DailyPlan">
@@ -742,6 +768,11 @@
 		<property name="description" value="description2" />
 		<property name="photo" value="http://www.photo2.com" />
 		<property name="trip" ref="trip2" />
+		<property name="slots">
+			<list>
+				<ref bean="slot5" />
+			</list>
+		</property>
 	</bean>
 	
 	<bean id="dailyPlan3" class="domain.DailyPlan">
@@ -750,6 +781,11 @@
 		<property name="description" value="description3" />
 		<property name="photo" value="http://www.photo3.com" />
 		<property name="trip" ref="trip3" />
+		<property name="slots">
+			<list>
+				
+			</list>
+		</property>
 	</bean>
 	
 	<bean id="dailyPlan4" class="domain.DailyPlan">
@@ -758,6 +794,11 @@
 		<property name="description" value="description4" />
 		<property name="photo" value="http://www.photo4.com" />
 		<property name="trip" ref="trip3" />
+		<property name="slots">
+			<list>
+				
+			</list>
+		</property>
 	</bean>
 	
 	<!-- Type -->
@@ -856,6 +897,7 @@
 		<property name="startTime" value="01/30/2014 22:00" />
 		<property name="endTime" value="01/31/2017 22:00" />
 		<property name="activity" ref="activity1" />
+		<property name="dailyPlan" ref="dailyPlan1" />
 	</bean>
 	
 	<bean id="slot2" class="domain.Slot">
@@ -865,6 +907,7 @@
 		<property name="startTime" value="02/28/2014 21:00" />
 		<property name="endTime" value="01/28/2017 22:00" />
 		<property name="activity" ref="activity2" />
+		<property name="dailyPlan" ref="dailyPlan1" />
 	</bean>
 	
 	<bean id="slot3" class="domain.Slot">
@@ -874,6 +917,7 @@
 		<property name="startTime" value="07/30/2015 23:00" />
 		<property name="endTime" value="07/31/2017 22:00" />
 		<property name="activity" ref="activity2" />
+		<property name="dailyPlan" ref="dailyPlan1" />
 	</bean>
 	
 	<bean id="slot4" class="domain.Slot">
@@ -883,6 +927,7 @@
 		<property name="startTime" value="01/30/2014 22:00" />
 		<property name="endTime" value="01/31/2017 22:00" />
 		<property name="activity" ref="activity3" />
+		<property name="dailyPlan" ref="dailyPlan1" />
 	</bean>
 	
 	<bean id="slot5" class="domain.Slot">
@@ -892,6 +937,7 @@
 		<property name="startTime" value="01/30/2014 22:00" />
 		<property name="endTime" value="01/31/2017 22:00" />
 		<property name="activity" ref="activity4" />
+		<property name="dailyPlan" ref="dailyPlan2" />
 	</bean>
 	
 	<!-- Group -->

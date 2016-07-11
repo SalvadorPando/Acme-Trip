@@ -57,10 +57,11 @@ public class Banner extends DomainEntity{
 
 	@Valid
 	@ManyToOne(optional=false)
-	public Campaign getCampaing() {
+	public Campaign getCampaign() {
 		return campaign;
 	}
-	public void setCampaing(Campaign campaign) {
+	
+	public void setCampaign(Campaign campaign) {
 		this.campaign = campaign;
 	}
 	
